@@ -3,13 +3,13 @@ CC=gcc
 CFLAGS= -g -Wall -pedantic
 EJS = ocabas
 ########################################################
-OBJECTSP0_E1 = command.o game.o game_loop.o graphic_engine.o screen.o space.o
+OBJECTS = command.o game.o game_loop.o graphic_engine.o screen.o space.o
 ########################################################
 
-all: $(EJS) clear
+all: $(EJS)
 
-ocabas: $(OBJECTSP0_E1)
-	$(CC) $(CFLAGS) -o ocabas $(OBJECTSP0_E1) 
+ocabas: $(OBJECTS)
+	$(CC) $(CFLAGS) -o ocabas $(OBJECTS) 
 
 
 game_loop.o: game_loop.c graphic_engine.h
