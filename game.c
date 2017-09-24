@@ -347,6 +347,6 @@ STATUS game_load_spaces(Game* game, char* filename) {
     }
   
     fclose(file);
-  
-    return status;
+	
+	return status;
 }
