@@ -18,7 +18,24 @@
 char *cmd_to_str[N_CMD] = {"No command", "Unknown", "Quit", "Next", "Back"};
 
 T_Command get_user_input(){
-T_Command cmd = NO_CMD;char input[CMD_LENGHT] = "";  
-if (scanf("%s", input) > 0){if (!strcmp(input, "q") || !strcmp(input, "quit")){cmd = QUIT;}else if (!strcmp(input, "n") || !strcmp(input, "next")){cmd = NEXT;}else if (!strcmp(input, "b") || !strcmp(input, "back")){cmd = BACK;}else{cmd = UNKNOWN;}}
+	
+	T_Command cmd = NO_CMD;
+	char input[CMD_LENGHT] = "";
+	
+	if (scanf("%s", input) > 0) {
+		if (!strcmp(input, "q") || !strcmp(input, "quit")) {
+			cmd = QUIT;
+		}
+		else if (!strcmp(input, "n") || !strcmp(input, "next")) {
+			cmd = NEXT;
+		}
+		else if (!strcmp(input, "b") || !strcmp(input, "back")) {
+			cmd = BACK;
+		}
+		else {
+			cmd = UNKNOWN;
+		}
+	}
+	
 return cmd;
 }
